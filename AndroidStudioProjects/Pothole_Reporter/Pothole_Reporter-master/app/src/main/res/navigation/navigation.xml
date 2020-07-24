@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    android:label="nav_host"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.potholereporter.TitleFragment"
+        android:label="Pothole Checker">
+        <action
+            android:id="@+id/action_titleFragment_to_displayData"
+            app:destination="@id/displayData"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayData"
+        android:name="com.example.potholereporter.DisplayData"
+        android:label="Previous Records" />
+</navigation>
